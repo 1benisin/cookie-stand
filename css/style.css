@@ -1,0 +1,76 @@
+
+
+div {
+  padding: 20px;
+  margin: 20px;
+  fill: burlywood;
+}
+
+h2 {
+  padding: 2px;
+  margin: 2px;
+  font-size: 2em;
+
+}
+
+ol li {
+  list-style-type:decimal;
+  color: red;
+}
+
+li {
+  list-style: inside square;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  word-spacing: 3.2px;
+  color: #000000;
+  font-variant: small-caps;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-family: "Arial Black", serif;
+  font-size: 18px;
+}
+
+header {
+  background-color: rgb(53, 53, 53);
+}
+
+header > h1 {
+  font-family: fantasy;
+  font-size: 3em;
+  text-align: right;
+  padding: .5em;
+  color: whitesmoke;
+
+}
+
+header > nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header > nav > ul> li {
+  float: left;
+  list-style-type: none;
+}
+
+header > nav > ul > li > a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+header > nav > ul > li a:hover {
+  background-color: black;
+}
+
+.active {
+  background-color: red;
+}
