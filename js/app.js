@@ -24,7 +24,17 @@ Store.prototype.populateCookieData = function () {
 };
 
 Store.prototype.renderData = function () {
+  console.log(`${this.name} rendering...`);
+  var tableBody = document.getElementById('tableBody');
+  var tableRow = document.createElement('tr');
 
+  for (var i = 0; i < hours.length; i++) {
+    var tableCell = document.createElement('td');
+    tableCell.textContent = this.cookieArray[i];
+    tableRow.appendChild(tableCell);
+  }
+
+  tableBody.appendChild(tableRow);
 };
 
 // ----- Create Stores -----
@@ -39,10 +49,13 @@ new Store('Alki', 2, 16, 4.6);
 
 for (let i = 0; i < Store.storeList.length; i++) {
   Store.storeList[i].populateCookieData();
+  Store.storeList[i].renderData();
 }
 
 console.log('cookiedata');
 console.log(Store.storeList);
+
+
 
 
 

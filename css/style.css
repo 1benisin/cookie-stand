@@ -2,6 +2,10 @@ tr {
   border: 1px solid red;
 }
 
+td {
+  padding: .5em;
+}
+
 div {
   padding: 20px;
   margin: 20px;
