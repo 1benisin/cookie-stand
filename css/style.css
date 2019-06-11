@@ -1,4 +1,6 @@
-
+tr {
+  border: 1px solid red;
+}
 
 div {
   padding: 20px;

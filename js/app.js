@@ -5,60 +5,34 @@ var hoursArray = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2p
 
 
 
-// ----- Objects -----
+// ----- Object Costructor -----
 
-var firstAndPike = {
-  name: '1st and Pike',
-  minMax: [23, 65],
-  avgCookiesPerCustomer: 6.3,
-  cookiesArrray: [],
+function Store(name, min, max, avgCookies) {
+  this.name = name;
+  this.min = min;
+  this.max = max;
+  this.avgCookies = avgCookies;
+  Store.storeList.push(this);
+}
+Store.storeList = [];
 
-  populateCookieData: function () {
-    for (var i = 0; i < hoursArray.length; i++) {
-      this.cookiesArrray[i] = Math.floor(getRandomIntInclusive(this.minMax[0], this.minMax[1]) * this.avgCookiesPerCustomer);
-    }
-  }
+Store.prototype.populateCookieData = function () {
+
 };
 
+Store.prototype.renderData = function () {
 
-var seatacAirport = {
-  name: 'Seatac Airport',
-  minMax: [3, 24],
-  avgCookiesPerCustomer: 1.2,
-  cookiesArrray: [],
-
-  populateCookieData: function () {
-    for (var i = 0; i < hoursArray.length; i++) {
-      this.cookiesArrray[i] = Math.floor(getRandomIntInclusive(this.minMax[0], this.minMax[1]) * this.avgCookiesPerCustomer);
-    }
-  }
 };
 
-var seattleCenter = {
-  name: 'Seattle Center',
-  minMax: [11, 38],
-  avgCookiesPerCustomer: 3.7,
-  cookiesArrray: [],
+// ----- Create Stores -----
 
-  populateCookieData: function () {
-    for (var i = 0; i < hoursArray.length; i++) {
-      this.cookiesArrray[i] = Math.floor(getRandomIntInclusive(this.minMax[0], this.minMax[1]) * this.avgCookiesPerCustomer);
-    }
-  }
-};
+new Store('1st and Pike', 23, 65, 6.3);
+new Store('Seatac Airport', 3, 24, 1.2);
+new Store('Seattle Center', 11, 38, 3.7);
+new Store('Capital Hill', 20, 38, 2.3);
+new Store('Alki', 2, 16, 4.6);
 
-var capitalHill = {
-  name: 'Capital Hill',
-  minMax: [20, 38],
-  avgCookiesPerCustomer: 2.3,
-  cookiesArrray: [],
-
-  populateCookieData: function () {
-    for (var i = 0; i < hoursArray.length; i++) {
-      this.cookiesArrray[i] = Math.floor(getRandomIntInclusive(this.minMax[0], this.minMax[1]) * this.avgCookiesPerCustomer);
-    }
-  }
-};
+console.log(Store.storeList);
 
 var alki = {
   name: 'Alki',
@@ -74,7 +48,7 @@ var alki = {
 };
 
 
-// ----- Functions -----
+// ----- Helper Functions -----
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -89,6 +63,7 @@ function sumArray(arr) {
   }
   return total;
 }
+
 
 
 function renderStoreData(store) {
@@ -114,15 +89,8 @@ function renderStoreData(store) {
   uList.appendChild(sumItem);
 }
 
-function renderAll() {
-  renderStoreData(firstAndPike);
-  renderStoreData(seatacAirport);
-  renderStoreData(seattleCenter);
-  renderStoreData(capitalHill);
-  renderStoreData(alki);
-}
 
-renderAll();
+
 
 
 
