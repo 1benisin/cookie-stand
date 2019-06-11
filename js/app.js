@@ -1,7 +1,7 @@
 
 'use strict';
 
-var hoursArray = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 
 
@@ -12,12 +12,15 @@ function Store(name, min, max, avgCookies) {
   this.min = min;
   this.max = max;
   this.avgCookies = avgCookies;
+  this.cookieArray = [];
   Store.storeList.push(this);
 }
 Store.storeList = [];
 
 Store.prototype.populateCookieData = function () {
-
+  for (var i = 0; i < hours.length; i++) {
+    this.cookieArray[i] = Math.round(getRandomIntInclusive(this.min, this.max) * this.avgCookies);
+  }
 };
 
 Store.prototype.renderData = function () {
@@ -32,7 +35,16 @@ new Store('Seattle Center', 11, 38, 3.7);
 new Store('Capital Hill', 20, 38, 2.3);
 new Store('Alki', 2, 16, 4.6);
 
+// ----- Populate & Render Store Data -----
+
+for (let i = 0; i < Store.storeList.length; i++) {
+  Store.storeList[i].populateCookieData();
+}
+
+console.log('cookiedata');
 console.log(Store.storeList);
+
+
 
 var alki = {
   name: 'Alki',
@@ -41,7 +53,7 @@ var alki = {
   cookiesArrray: [],
 
   populateCookieData: function () {
-    for (var i = 0; i < hoursArray.length; i++) {
+    for (var i = 0; i < hours.length; i++) {
       this.cookiesArrray[i] = Math.floor(getRandomIntInclusive(this.minMax[0], this.minMax[1]) * this.avgCookiesPerCustomer);
     }
   }
@@ -78,9 +90,9 @@ function renderStoreData(store) {
   storeDiv.appendChild(uList);
   mainDiv.appendChild(storeDiv);
 
-  for (var i = 0; i < hoursArray.length; i++) {
+  for (var i = 0; i < hours.length; i++) {
     var listItem = document.createElement('li');
-    listItem.textContent = `${hoursArray[i]}: ${store.cookiesArrray[i]} cookies`;
+    listItem.textContent = `${hours[i]}: ${store.cookiesArrray[i]} cookies`;
     uList.appendChild(listItem);
   }
 
