@@ -122,7 +122,7 @@ function renderAll() {
   renderStoreData(alki);
 }
 
-renderAll(); Í
+renderAll();
 
 
 
