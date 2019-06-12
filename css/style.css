@@ -1,5 +1,8 @@
-tr {
-  
+fieldset {
+  border: .1em black solid;
+  padding: 2em;
+  margin: 2em;
+
 }
 
 td {

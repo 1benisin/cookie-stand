@@ -12,6 +12,7 @@ function Store(name, min, max, avgCookies) {
   this.max = max;
   this.avgCookies = avgCookies;
   this.cookieArray = [];
+  this.populateCookieData();
   Store.storeList.push(this);
 }
 Store.storeList = [];
@@ -23,8 +24,6 @@ Store.prototype.populateCookieData = function () {
 };
 
 Store.prototype.renderData = function () {
-  // populate data
-  this.populateCookieData();
 
   var tempRow = [];
   tempRow.push(this.name);
@@ -103,7 +102,6 @@ function renderTableFoot() {
     totals[15] += sumArray(Store.storeList[i].cookieArray);
   }
   totals.splice(0, 0, 'Totals');
-  console.log(totals);
 
   var tableFoot = document.getElementById('tableFoot');
   var tableRow = document.createElement('tr');
@@ -119,9 +117,6 @@ function renderTableFoot() {
 
 
 renderSalesTable();
-
-console.log('cookiedata');
-console.log(Store.storeList);
 
 
 // ----- Helper Functions -----
@@ -140,3 +135,23 @@ function sumArray(arr) {
   return total;
 }
 
+
+// ----- Form -----
+
+// get form data
+// create new store
+
+
+
+
+var form = document.getElementById('storeForm');
+
+form.addEventListener('submit', function (e) {
+  event.preventDefault();
+  new Store(e.target.formName.value, e.target.formMin.value, e.target.formMax.value, e.target.formAvgCookies.value);
+});
+
+
+// test
+// console.log('cookiedata');
+// console.log(Store.storeList);
