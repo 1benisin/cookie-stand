@@ -115,24 +115,6 @@ function renderTableFoot() {
   }
 
   tableFoot.appendChild(tableRow);
-
-  // tempRow.push('Totals');
-  // for (var i = 0; i < tableTotals.length; i++) {
-  //   tempRow.push(tableTotals[i]);
-  // }
-  // tempRow.push('Daily Location Total');
-
-  // var tableHead = document.getElementById('tableHead');
-  // var tableRow = document.createElement('tr');
-  // var hCell = document.createElement('th');
-
-  // for (var j = 0; j < tempRow.length; j++) {
-  //   hCell = document.createElement('th');
-  //   hCell.textContent = tempRow[j];
-  //   tableRow.appendChild(hCell);
-  // }
-
-  // tableHead.appendChild(tableRow);
 }
 
 
