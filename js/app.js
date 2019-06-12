@@ -62,12 +62,7 @@ new Store('Alki', 2, 16, 4.6);
 function renderSalesTable() {
 
   renderTableHead();
-
-  // renderTableBody
-  for (let i = 0; i < Store.storeList.length; i++) {
-    Store.storeList[i].renderData();
-  }
-
+  renderTableBody();
   renderTableFoot();
 
 }
@@ -92,6 +87,12 @@ function renderTableHead() {
   tableHead.appendChild(tableRow);
 }
 
+function renderTableBody() {
+  for (let i = 0; i < Store.storeList.length; i++) {
+    Store.storeList[i].renderData();
+  }
+}
+
 function renderTableFoot() {
   // add up all the totals
   var totals = new Array(hours.length + 1).fill(0);
@@ -111,7 +112,7 @@ function renderTableFoot() {
     fCell.textContent = totals[m];
     tableRow.appendChild(fCell);
   }
-
+  tableFoot.removeChild(tableFoot.firstChild);
   tableFoot.appendChild(tableRow);
 }
 
@@ -149,6 +150,8 @@ var form = document.getElementById('storeForm');
 form.addEventListener('submit', function (e) {
   event.preventDefault();
   new Store(e.target.formName.value, e.target.formMin.value, e.target.formMax.value, e.target.formAvgCookies.value);
+  Store.storeList[Store.storeList.length - 1].renderData();
+  renderTableFoot();
 });
 
 
