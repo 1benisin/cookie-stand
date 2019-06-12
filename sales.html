@@ -37,10 +37,13 @@
         <form id="storeForm">
             <fieldset id="fieldset">
                 <legend>Add New Store Data to Table</legend>
-                <label>Name: <input type='text' id="formName" name="Store Name:" size="15" maxlength="30" /></label>
-                <label>Min: <input type='text' id="formMin" name="Store Name:" size="15" maxlength="30" /></label>
-                <label>Max: <input type='text' id="formMax" name="Store Name:" size="15" maxlength="30" /></label>
-                <label>Average Cookies: <input type='text' id="formAvgCookies" name="Store Name:" size="15"
+                <label>Name: <input required type='text' id="formName" name="Store Name:" size="15"
+                        maxlength="30" /></label>
+                <label>Min: <input required type='number' id="formMin" name="Store Name:" size="15"
+                        maxlength="30" /></label>
+                <label>Max: <input required type='number' id="formMax" name="Store Name:" size="15"
+                        maxlength="30" /></label>
+                <label>Average Cookies: <input required type='number' id="formAvgCookies" name="Store Name:" size="15"
                         maxlength="30" /></label>
                 <input type="submit" name="subscribe" value="Add Store" />
             </fieldset>

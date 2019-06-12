@@ -139,12 +139,6 @@ function sumArray(arr) {
 
 // ----- Form -----
 
-// get form data
-// create new store
-
-
-
-
 var form = document.getElementById('storeForm');
 
 form.addEventListener('submit', function (e) {
@@ -155,6 +149,4 @@ form.addEventListener('submit', function (e) {
 });
 
 
-// test
-// console.log('cookiedata');
-// console.log(Store.storeList);
+
