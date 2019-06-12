@@ -1,9 +1,10 @@
 tr {
-  border: 1px solid red;
+  
 }
 
 td {
   padding: .5em;
+  border: 1px solid red;
 }
 
 div {
