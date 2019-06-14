@@ -97,3 +97,90 @@ header > nav > ul > li a:hover {
 .active {
   background-color: red;
 }
+
+
+/* Home Page */
+
+
+main {
+  /* background: hotpink; */
+  width: 1200px;
+  margin: auto;
+  overflow: auto;
+}
+
+#mainContent {
+  /* background: darkorchid; */
+  padding: 0;
+
+  /* display: inline-block; */
+  float: left;
+  width: 900px;
+  margin: auto;
+}
+
+#mainContent p {
+  text-align: center;
+}
+
+#sidebar {
+  /* background: royalblue; */
+  margin: 0;
+  padding: 0;
+
+  /* display: inline-block; */
+  float: left;
+  width: 300px;
+  margin: auto;
+}
+#sidebar {
+  text-align: center;
+}
+
+#products div {
+  /* background: olivedrab; */
+  margin: 20;
+  padding: 0;
+
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  float: left;
+}
+
+#news > div {
+  /* background: yellow; */
+  margin: 20;
+  padding: 0;
+
+  width: 400px;
+  /* height: 260px; */
+  /* overflow: hidden; */
+  float: left;
+}
+
+#news > div > div {
+  /* background: rgb(0, 162, 255); */
+  margin: 20;
+  padding: 0;
+
+  width: 300px;
+  height: 260px;
+  /* overflow: hidden; */
+  /* float: left; */
+}
+
+#news img {
+  object-fit: cover;
+  width: 300px;
+  height: 260px;
+}
+
+footer {
+  background-color: black;
+  height: 50px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+
