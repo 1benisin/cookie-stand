@@ -48,14 +48,6 @@ Store.prototype.renderData = function () {
 };
 
 
-// ----- Create Stores -----
-
-new Store('1st and Pike', 23, 65, 6.3);
-new Store('Seatac Airport', 3, 24, 1.2);
-new Store('Seattle Center', 11, 38, 3.7);
-new Store('Capital Hill', 20, 38, 2.3);
-new Store('Alki', 2, 16, 4.6);
-
 
 // ----- Render Store Data (also populates data) -----
 
@@ -117,8 +109,6 @@ function renderTableFoot() {
 }
 
 
-renderSalesTable();
-
 
 // ----- Helper Functions -----
 
@@ -149,4 +139,16 @@ form.addEventListener('submit', function (e) {
 });
 
 
+
+
+// ----- Create Stores -----
+
+new Store('1st and Pike', 23, 65, 6.3);
+new Store('Seatac Airport', 3, 24, 1.2);
+new Store('Seattle Center', 11, 38, 3.7);
+new Store('Capital Hill', 20, 38, 2.3);
+new Store('Alki', 2, 16, 4.6);
+
+
+renderSalesTable();
 
