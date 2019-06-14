@@ -103,14 +103,14 @@ header > nav > ul > li a:hover {
 
 
 main {
-  background: hotpink;
+  /* background: hotpink; */
   width: 1200px;
   margin: auto;
   overflow: auto;
 }
 
 #mainContent {
-  background: darkorchid;
+  /* background: darkorchid; */
   padding: 0;
 
   /* display: inline-block; */
@@ -124,7 +124,7 @@ main {
 }
 
 #sidebar {
-  background: royalblue;
+  /* background: royalblue; */
   margin: 0;
   padding: 0;
 
@@ -138,7 +138,7 @@ main {
 }
 
 #products div {
-  background: olivedrab;
+  /* background: olivedrab; */
   margin: 20;
   padding: 0;
 
@@ -149,7 +149,7 @@ main {
 }
 
 #news > div {
-  background: yellow;
+  /* background: yellow; */
   margin: 20;
   padding: 0;
 
@@ -160,7 +160,7 @@ main {
 }
 
 #news > div > div {
-  background: rgb(0, 162, 255);
+  /* background: rgb(0, 162, 255); */
   margin: 20;
   padding: 0;
 
